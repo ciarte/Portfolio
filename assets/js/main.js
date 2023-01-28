@@ -20,53 +20,68 @@
   };
 
   /**
+   * Intro type effect
+   */
+  const typed = new Typed('.typed', {
+      strings: [
+        "<i>Web Developer</i>", 
+        "<i>Freelancer</i>", 
+        "<i>Full Stack</i>"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 85,
+      backDelay: 300,
+      contentType: 'html',
+      smartBackspace: false,
+    });
+  /**
    * Changes the subtitle
    */
-  class TextoAnimado {
-    constructor(id, objetivo) {
-      this.texto = document.getElementById(id);
-      this.objetivo =document.getElementById(objetivo)
-      this.letras = this.texto.innerText.split("");
+  // class TextoAnimado {
+  //   constructor(id, objetivo) {
+  //     this.texto = document.getElementById(id);
+  //     this.objetivo =document.getElementById(objetivo)
+  //     this.letras = this.texto.innerText.split("");
 
-      this.texto.innerText = "";
+  //     this.texto.innerText = "";
 
-      this.letras.forEach((letra) => {
-        let caracter = letra === " " ? "&nbsp;" : letra;
-        this.texto.innerHTML =
-          this.texto.innerHTML +
-          `
-        <div>
-          <span>${caracter}</span>
-          <span class="segunda-linea">${caracter}</span>
-        </div>`;
-      });
+  //     this.letras.forEach((letra) => {
+  //       let caracter = letra === " " ? "&nbsp;" : letra;
+  //       this.texto.innerHTML =
+  //         this.texto.innerHTML +
+  //         `
+  //       <div>
+  //         <span>${caracter}</span>
+  //         <span class="segunda-linea">${caracter}</span>
+  //       </div>`;
+  //     });
 
-      this.objetivo.addEventListener("mouseenter", () => {
-        let counter = 0;
-        const intervalo = setInterval(() => {
-          if (counter < this.texto.children.length) {
-            this.texto.children[counter].classList.add("animacion");
-            counter += 1;
-          } else {
-            clearInterval(intervalo);
-          }
-        }, 30);
-      });
+  //     this.objetivo.addEventListener("mouseenter", () => {
+  //       let counter = 0;
+  //       const intervalo = setInterval(() => {
+  //         if (counter < this.texto.children.length) {
+  //           this.texto.children[counter].classList.add("animacion");
+  //           counter += 1;
+  //         } else {
+  //           clearInterval(intervalo);
+  //         }
+  //       }, 30);
+  //     });
 
-      this.objetivo.addEventListener("mouseleave", () => {
-        let counter = 0;
-        const intervalo = setInterval(() => {
-          if (counter < this.texto.children.length) {
-            this.texto.children[counter].classList.remove("animacion");
-            counter += 1;
-          } else {
-            clearInterval(intervalo);
-          }
-        }, 30);
-      });
-    }
-  }
-  new TextoAnimado("text", "logotipo");
+  //     this.objetivo.addEventListener("mouseleave", () => {
+  //       let counter = 0;
+  //       const intervalo = setInterval(() => {
+  //         if (counter < this.texto.children.length) {
+  //           this.texto.children[counter].classList.remove("animacion");
+  //           counter += 1;
+  //         } else {
+  //           clearInterval(intervalo);
+  //         }
+  //       }, 30);
+  //     });
+  //   }
+  // }
+  // new TextoAnimado("text", "logotipo");
 
   // const = texto =  document.getElementById('text');
   // const = this. = this.texto.innerText.split("");

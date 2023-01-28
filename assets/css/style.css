@@ -96,13 +96,13 @@ h6 {
   border: 2px solid violet ;
   color: #fff;
 }  */
- #text {
+ /* #text {
   text-align: center;
   /* padding: 5px 5px; */
-  transition: .5s ease all;
+  /* transition: .5s ease all;
   letter-spacing: .2px;
   cursor:context-menu;
-}
+/* } 
 .texto-animado  {
   display: flex;
   overflow: hidden;
@@ -127,7 +127,7 @@ transform:translateY(-100px) ;
   top: 100px;
   color:#006d77;
   padding-bottom: 6px;
-}
+}  */
 /* #header h2 span {
   color: #fff;
   border-bottom: 3px solid #006d77;
@@ -226,6 +226,16 @@ transform:translateY(-100px) ;
   #header.header-top h1 {
     font-size: 26px;
   }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero span {
+  position: center;
+  color: #26cfde;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
